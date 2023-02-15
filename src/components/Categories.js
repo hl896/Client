@@ -1,7 +1,7 @@
 import { categories } from "../data";
 import { mobile } from "../responsive";
-
-
+import styled from 'styled-components';
+import CategoryItem from './CategoryItem'
 
 
 

@@ -77,6 +77,9 @@ const Login = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
+    console.log("e  username:", username)
+
+    console.log("e  password:", password)
     login(dispatch, {username, password});
   }
   return (

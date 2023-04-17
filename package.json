@@ -13,7 +13,7 @@
     "react": "^0.0.0-experimental-4a4ef2706-20230212",
     "react-dom": "^0.0.0-experimental-4a4ef2706-20230212",
     "react-redux": "^8.0.5",
-    "react-router-dom": "^6.8.1",
+    "react-router-dom": "^6.9.0",
     "react-scripts": "4.0.3",
     "react-stripe-checkout": "^2.6.3",
     "redux-persist": "^6.0.0",

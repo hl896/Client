@@ -13,6 +13,7 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Success from './pages/Success';
 import { useSelector } from 'react-redux';
+import SearchListPage from './pages/SearchListPage';
 
 
 const App = () => {
@@ -23,6 +24,7 @@ const App = () => {
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/products/:category" element={<ProductList />} />
+        <Route path="/products/search/:title" element={<SearchListPage /> } />
         <Route path="/product/:id" element={<Product />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/success" element={<Success />} />

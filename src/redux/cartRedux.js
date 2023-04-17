@@ -15,9 +15,24 @@ const cartSlice = createSlice({
             state.products.push(action.payload)
             state.total += action.payload.price *action.payload.quantity;
         },
+        searchProductStart: (state) => {
+            state.isFetching=true;
+            state.error=false;
+        },
+        searchProductSuccess: (state, action) => {
+            state.isFetching=false;
+            state.products.splice(
+                state.products.findIndex((item) => item.title === action.payload)
+            );
+        },
+        searchProductFailure: (state) => {
+            state.isFetching = false;
+            state.error = true;
+        }
+
     }
 })
 
 
-export const {addProduct} = cartSlice.actions;
+export const {addProduct, searchProductFailure, searchProductStart, searchProductSuccess } = cartSlice.actions;
 export default cartSlice.reducer;

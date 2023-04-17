@@ -1,14 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Badge } from "@material-ui/core";
 import { Search, ShoppingCartOutlined } from "@material-ui/icons";
 import styled from "styled-components";
 import { mobile } from "../responsive";
-import { useSelector } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Link, Navigate,
+  useNavigate
+} from "react-router-dom";
+import { logoff, searchProducts } from '../redux/apiCalls';
+import Login from '../pages/Login'
 
 const Container = styled.div`
   height: 60px;
-  ${mobile({ height: "50px" })}
+  ${mobile({ height: "50px" })};
+  margin-bottom:20px;
 `;
 
 const Wrapper = styled.div`
@@ -69,28 +78,70 @@ const MenuItem = styled.div`
 `;
 
 const Navbar = () => {
+  const [searchContent, setSearchContent] = useState('');
   const quantity = useSelector(state=>state.cart.quantity);
-
+  const user = useSelector((state)=> state.user.currentUser);
+  const dispatch = useDispatch();
+  console.log("NAV Bar user:", user)
   console.log("quantity:", quantity)
+  const navigate = useNavigate()
 
+  const gotoLogin = async (e) => {
+    e.preventDefault();
+    navigate("/login")
+  }
+
+  const handleLogout = async (e) => {
+    e.preventDefault();
+    logoff(dispatch)
+  }
+
+  const handleRegister = async (e) => {
+    e.preventDefault();
+    navigate("/register")
+  }
+
+  const handleSearch = async (e) => {
+    e.preventDefault();
+    searchProducts(e.target.value, dispatch)
+  } 
+  const handleSearchContent = async (e) => {
+    e.preventDefault();
+    setSearchContent(e.target.value);
+  }
   return (
     <Container>
       <Wrapper>
         <Left>
           <Language>EN</Language>
           <SearchContainer>
-            <Input placeholder="Search" />
-            <Search style={{ color: "gray", fontSize: 16 }} />
+            <Input onChange={handleSearchContent} name='searchContent' placeholder="Search" />
+            {
+              searchContent ? 
+              <Link to={`/products/search/${searchContent}`}>
+                <Search style={{ color: "gray", fontSize: 16 }} />
+              </Link>  :
+              <Search style={{ color: "gray", fontSize: 16 }} />
+            }
           </SearchContainer>
         </Left>
         <Center>
+          <Link to={`/`} >
           <Logo>HY.</Logo>
+          </Link> 
           <br />
 
         </Center>
         <Right>
-          <MenuItem>REGISTER</MenuItem>
-          <MenuItem>SIGN IN</MenuItem>
+          
+          {user ? 
+            <MenuItem onClick={handleLogout}>SIGN OUT</MenuItem>: 
+            <>
+              <MenuItem onClick={handleRegister}>REGISTER</MenuItem>
+              <MenuItem onClick={gotoLogin} >SIGN IN</MenuItem>
+            </>
+          }
+          
           <Link to="/cart" >
           <MenuItem>
             <Badge badgeContent={quantity} color="primary">

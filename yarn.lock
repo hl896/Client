@@ -1600,7 +1600,7 @@
 
 "@reduxjs/toolkit@^1.9.3":
   version "1.9.3"
-  resolved "https://registry.npmjs.org/@reduxjs/toolkit/-/toolkit-1.9.3.tgz"
+  resolved "https://registry.yarnpkg.com/@reduxjs/toolkit/-/toolkit-1.9.3.tgz#27e1a33072b5a312e4f7fa19247fec160bbb2df9"
   integrity sha512-GU2TNBQVofL09VGmuSioNPQIu6Ml0YLf4EJhgj0AvBadRlCGzUWet8372LjvO4fqKZF2vH1xU0htAa7BrK9pZg==
   dependencies:
     immer "^9.0.16"
@@ -9619,7 +9619,7 @@ react-is@^18.0.0:
 
 react-redux@^8.0.5:
   version "8.0.5"
-  resolved "https://registry.npmjs.org/react-redux/-/react-redux-8.0.5.tgz"
+  resolved "https://registry.yarnpkg.com/react-redux/-/react-redux-8.0.5.tgz#e5fb8331993a019b8aaf2e167a93d10af469c7bd"
   integrity sha512-Q2f6fCKxPFpkXt1qNRZdEDLlScsDWyrgSj0mliK59qU6W5gvBiKkdMEG2lJzhd1rCctf0hb6EtePPLZ2e0m1uw==
   dependencies:
     "@babel/runtime" "^7.12.1"
@@ -9634,9 +9634,9 @@ react-refresh@^0.8.3:
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
-react-router-dom@^6.8.1:
+react-router-dom@^6.9.0:
   version "6.9.0"
-  resolved "https://registry.npmjs.org/react-router-dom/-/react-router-dom-6.9.0.tgz"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.9.0.tgz#dd8b4e461453bd4cad2e6404493d1a5b4bfea758"
   integrity sha512-/seUAPY01VAuwkGyVBPCn1OXfVbaWGGu4QN9uj0kCPcTyNYgL1ldZpxZUpRU7BLheKQI4Twtl/OW2nHRF1u26Q==
   dependencies:
     "@remix-run/router" "1.4.0"
@@ -9814,7 +9814,7 @@ redent@^3.0.0:
 
 redux-persist@^6.0.0:
   version "6.0.0"
-  resolved "https://registry.npmjs.org/redux-persist/-/redux-persist-6.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/redux-persist/-/redux-persist-6.0.0.tgz#b4d2972f9859597c130d40d4b146fecdab51b3a8"
   integrity sha512-71LLMbUq2r02ng2We9S215LtPu3fY0KgaGE0k8WRgl6RkqxtGfl7HUozz1Dftwsb0D/5mZ8dwAaPbtnzfvbEwQ==
 
 redux-thunk@^2.4.2:

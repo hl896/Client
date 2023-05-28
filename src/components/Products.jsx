@@ -22,8 +22,8 @@ const Products = ({cat, filters, sorts}) => {
       try {
         const res = await axios.get(
           cat
-          ? `http://hyweb.hopto.org:5000/api/products?category=${cat}`
-          : "http://hyweb.hopto.org:5000/api/products"
+          ? `https://nodejsapiforlhy.herokuapp.com/api/products?category=${cat}`
+          : "https://nodejsapiforlhy.herokuapp.com/api/products"
           )
         
           setProducts(res.data);

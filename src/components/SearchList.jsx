@@ -20,7 +20,7 @@ const SearchList = ({searchContent}) => {
             try {
                 console.log("searchContent:", searchContent)
                 const res = await axios.get(
-                    `http://hyweb.hopto.org:5000/api/products/search?title=${searchContent}`
+                    `https://nodejsapiforlhy.herokuapp.com/api/products/search?title=${searchContent}`
                 )
 
                 setProducts(res.data);

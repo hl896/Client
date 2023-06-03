@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const BASE_URL = "https://nodejsapiforlhy.herokuapp.com/api/";
+const BASE_URL = "http://ec2-3-25-66-199.ap-southeast-2.compute.amazonaws.com:5000/api/";
 const user =JSON.parse(localStorage.getItem("persist:root"))?.user;
 const currentUser = user && JSON.parse(user).currentUser;
 const token = currentUser?.accessToken;

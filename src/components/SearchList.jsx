@@ -20,7 +20,7 @@ const SearchList = ({searchContent}) => {
             try {
                 console.log("searchContent:", searchContent)
                 const res = await axios.get(
-                    `https://nodejsapiforlhy.herokuapp.com/api/products/search?title=${searchContent}`
+                    `http://ec2-3-25-66-199.ap-southeast-2.compute.amazonaws.com:5000/api/products/search?title=${searchContent}`
                 )
 
                 setProducts(res.data);
